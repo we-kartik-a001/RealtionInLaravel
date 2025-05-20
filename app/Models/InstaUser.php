@@ -14,4 +14,5 @@ class InstaUser extends Model
     {
         return $this->hasMany(InstaPost::class);
     }
+     
 }

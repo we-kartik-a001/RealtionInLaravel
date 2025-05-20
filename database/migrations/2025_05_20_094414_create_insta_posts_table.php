@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('insta_posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug');
+            $table->string('description');
             $table->string('detail');
             $table->unsignedBigInteger('Insta_user_id');
             $table->timestamps();

@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\InstaPost;
+use App\Models\InstaUser;
+use App\Observers\InstaPostObserver;
+use App\Observers\InstaUserObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        InstaUser::observe(InstaUserObserver::class);
+        InstaPost::observe(InstaPostObserver::class);
     }
 }

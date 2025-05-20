@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CollectionContoller;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\InstaPostController;
 use App\Http\Controllers\InstaUserController;
 use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
@@ -18,3 +19,7 @@ Route::get('/volunteer',[VolunteerController::class,'index']);
 Route::get('/collector',[CollectionContoller::class,'index']);
 
 Route::get('/insta',[InstaUserController::class,'index']);
+
+Route::get('/create',[InstaUserController::class,'create']);
+
+Route::get('post/create',[InstaPostController::class,'create']);

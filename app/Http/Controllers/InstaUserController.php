@@ -10,8 +10,14 @@ class InstaUserController extends Controller
 {
     public function index()
     {
-        $instapost = InstaUser::with('InstaPost')->find(1);
+        $instapost = InstaUser::with('InstaPost')->find(2);
 
         return $instapost;
+    }
+
+    // This will delete the user and post together
+    public function create()
+    {
+        $user = InstaUser::find(3)->delete();
     }
 }
